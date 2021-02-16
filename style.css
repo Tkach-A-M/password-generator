@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    user-select: none;
 }
 
 body{
@@ -8,6 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+   
 }
 
 .inputArea{
@@ -39,7 +41,8 @@ body{
                 4px 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-.inputArea #generateButton{
+.inputArea #generateButton, 
+.inputArea #copyButton{
     position: relative;
     color: #fff;
     background: #333;
@@ -50,6 +53,11 @@ body{
     outline: none;
 }
 
-.inputArea #generateButton:active{
+.inputArea #generateButton:active,
+.inputArea #copyButton:active{
     background: #9c27b0 ;
+}
+
+.active{
+    background: #76FF00;
 }

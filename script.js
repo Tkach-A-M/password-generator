@@ -1,8 +1,9 @@
 const generator_button = document.querySelector('#generateButton');
+const copyButton = document.querySelector('#copyButton');
 const password = document.querySelector('#password');
 
 generator_button.addEventListener('click', generetePassword);
-
+copyButton.addEventListener('click', copyPassword);
 
 function generetePassword(){
 
@@ -21,3 +22,9 @@ function generetePassword(){
     console.log(password_text.join(''));
 }
 
+function copyPassword(){
+    password.select();
+    password.setSelectionRange(0, 9999);
+    document.execCommand('copy');
+    password.classList.toggle('active');
+}
