@@ -22,7 +22,7 @@ body{
     color: #333;
 }
 
-.inputArea input{
+.inputArea #password{
     position: relative;
     width: 100%;
     height: 60px;
@@ -56,6 +56,14 @@ body{
 .inputArea #generateButton:active,
 .inputArea #copyButton:active{
     background: #9c27b0 ;
+}
+
+#passwordSettings input[type="checkbox"]{
+    margin: 10px;
+}
+
+#passwordSettings label{
+    font-size: 20px;
 }
 
 .active{

@@ -10,7 +10,15 @@
 <body>
     <div class="inputArea">
         <h2>Random password</h2>
-        <input type="text" name="password" id="password" placeholder="Create Pasword">
+        <div id="passwordSettings">
+            <input type="checkbox" id="smallLetters"><label for="smallLetters">Small letters</label></br>
+            <input type="checkbox" id="bigLetters"><label for="bigLetters">Big letters</label></br>
+            <input type="checkbox" id="numbers"><label for="numbers">Numbers</label></br>
+            <input type="checkbox" id="symbols"><label for="symbols">Symbols</label></br>
+            <h3>Password length</h3>
+            <input type="number" name="passLength" id="passLength" min="4" max="128" required>
+        </div>
+        <input type="text" name="password" id="password" placeholder="Create Pasword" readonly>
         <button id="generateButton">Create Password</button>
         <button id="copyButton">Copy Password</button>
     </div>
