@@ -34,7 +34,7 @@ function generetePassword(){
 
     let passwordLength = lengthInput.value;
     let password_text = [];
-    
+
     for(let i = 0; i < passwordLength; i++){
         let randomNumber = Math.floor(Math.random() * symbols.length);
         password_text[i] = symbols[randomNumber];
