@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     user-select: none;
+    box-sizing: border-box;
 }
 
 body{
@@ -10,6 +11,10 @@ body{
     align-items: center;
     min-height: 100vh;
    
+}
+
+.hiddenInput{
+    display: none;
 }
 
 .inputArea{
@@ -42,7 +47,8 @@ body{
 }
 
 .inputArea #generateButton, 
-.inputArea #copyButton{
+.inputArea #copyButton,
+.inputArea #downloadResults{
     position: relative;
     color: #fff;
     background: #333;
@@ -56,6 +62,12 @@ body{
 .inputArea #generateButton:active,
 .inputArea #copyButton:active{
     background: #9c27b0 ;
+}
+
+.buttons{
+    display: flex;
+    /* justify-content: left;
+    align-items: center; */
 }
 
 #passwordSettings input[type="checkbox"]{

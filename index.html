@@ -15,12 +15,17 @@
             <input type="checkbox" id="bigLetters"><label for="bigLetters">Big letters</label></br>
             <input type="checkbox" id="numbers"><label for="numbers">Numbers</label></br>
             <input type="checkbox" id="symbols"><label for="symbols">Symbols</label></br>
+            <input type="checkbox" id="otherSymbols"><label for="symbols">Other symbols</label></br>
+            <input type="text" name="otherSymbolsInput" id="otherSymbolsInput" class="hiddenInput" placeholder="Use ',' as separaror">
             <h3>Password length</h3>
             <input type="number" name="passLength" id="passLength" min="4" max="128" required value="8">
         </div>
         <input type="text" name="password" id="password" placeholder="Create Pasword" readonly>
-        <button id="generateButton">Create Password</button>
-        <button id="copyButton">Copy Password</button>
+        <div class="buttons">
+            <button id="generateButton">Create Password</button>
+            <button id="copyButton">Copy Password</button>
+            <button id="downloadResults">Download</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

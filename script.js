@@ -2,12 +2,16 @@ const smallLettersCB = document.querySelector('#smallLetters');
 const bigLettersCB = document.querySelector('#bigLetters');
 const numbersCB = document.querySelector('#numbers');
 const symbolsCB = document.querySelector('#symbols');
+const otherSymbolsCB = document.querySelector('#otherSymbols');
+const otherSymbolsInput = document.querySelector('#otherSymbolsInput');
 const lengthInput = document.querySelector('#passLength');
 
 const generator_button = document.querySelector('#generateButton');
 const copyButton = document.querySelector('#copyButton');
+const downloadResultButton = document.querySelector('#downloadResults')
 const password = document.querySelector('#password');
 
+otherSymbolsCB.addEventListener('change', toggleOtherSymbolsInput)
 generator_button.addEventListener('click', generetePassword);
 copyButton.addEventListener('click', copyPassword);
 
@@ -16,6 +20,10 @@ const bigLettersArr = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L
 const numbersArr = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 const symbolsArr = ['-', '+', '_', '=', '{', '}', '[', ']', '!', '@', '#', '$', '%', '&', '?', '(', ')', '*', '|'];
 let symbols = [];
+
+function toggleOtherSymbolsInput(){
+    otherSymbolsInput.classList.toggle('hiddenInput');
+}
 
 function generetePassword(){
 
@@ -30,6 +38,9 @@ function generetePassword(){
     }
     if(symbolsCB.checked){
         symbols.push(...symbolsArr);
+    }
+    if(otherSymbolsCB.checked){
+        symbols.push(otherSymbolsInput.value.split(','));
     }
 
     let passwordLength = lengthInput.value;
